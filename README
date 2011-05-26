@@ -1,0 +1,9 @@
+The "Monty Hall Problem" refers to a game show scenario in which you are presented with three doors to choose from, as in the famous "Let's Make a Deal" game show.
+
+Behind one door is a car, and behind the other two there are goats.  Most people would consider the car more desirable, so that is considered the goal.
+
+Monty Hall asks you to choose one of the three.  You do, then he eliminates one of the doors that has a goat.  Should you switch to the other door, or stick with the one you have?
+
+Intuitively, the human mind says, well, I either have the correct door or I do not, so the chances are 50-50.  The chances are in fact 2/3 in your favor if you switch, because Monty has given you an advantage by eliminating a door after you have already chosen one.
+
+The Perl script proves this by running the scenario a hundred thousand times and counting the results.
