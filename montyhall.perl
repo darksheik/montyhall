@@ -19,7 +19,7 @@ for ($i=0; $i < TRIES; $i++) {
 }
 
 my $percent = 100 * $result / TRIES;
-print "Won $result of $tries times, $percent %\n";
+print "Won $result of " . TRIES . " times, $percent %\n";
 
 sub otherdoor {
    my $door1 = $_[0];
