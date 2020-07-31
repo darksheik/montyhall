@@ -2,9 +2,10 @@
 
 
 my $result = 0;
-my $tries = 100000;
+use constant TRIES => 1000000;
+use constant DOORS => (0,1,2);
 
-for ($i=0; $i<$tries; $i++) {
+for ($i=0; $i < TRIES; $i++) {
   # Put the car behind a door
   my $doorpicked = int(rand(3));
   # Contestant picks a door
@@ -17,16 +18,15 @@ for ($i=0; $i<$tries; $i++) {
   if ($contestantpick == $doorpicked) { $result++; }
 }
 
-my $percent = 100 * $result/$tries;
+my $percent = 100 * $result / TRIES;
 print "Won $result of $tries times, $percent %\n";
 
 sub otherdoor {
-   my @doors = (0,1,2);
    my $door1 = $_[0];
    my $door2 = $_[1];
 
    my $result;
-   foreach my $door (@doors) {
+   foreach my $door (DOORS) {
       if ($door != $door1 && $door ne $door2) {
           $result = $door;
       }
